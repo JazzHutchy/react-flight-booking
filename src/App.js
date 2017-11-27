@@ -2,15 +2,33 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Button from './components/Button'
+import Emoji from './components/Emoji'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>This is a heading</h1>
-        <Button title='Find Flights' primary={true} />
-        <Button title='Sign Up' primary={true} />
-        <Button title='Enter Competition' magic={true} />
+
+        <Emoji />
+        <Emoji cat />
+        <Emoji emotion='sad' />
+        <Emoji cat emotion='sad' />
+        <Emoji emotion='love' />
+        <Emoji cat emotion='love' />
+        <Emoji emotion='fear' />
+        <Emoji cat emotion='fear' />
+
+        <br />
+
+        <Button primary>
+          Find Flights
+        </Button>
+        <Button primary>
+          Sign Up
+        </Button>
+        <Button children='Enter Competition' magic href='/competition' />
+
         <ul>
           <li>One</li>
           <li>Two</li>
@@ -18,7 +36,7 @@ class App extends Component {
           <li>Four</li>
           <li>Five</li>
         </ul>
-      </div>
+      </div >
     )
   }
 }

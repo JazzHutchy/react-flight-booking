@@ -5,10 +5,13 @@ body {
 }
 
 .btn {
+  display: inline-block;
   color: #111111;
   background-color: white;
   border: 1px solid #aaa;
   border-radius: 3px;
+  padding: 10px;
+
 }
 .btn-primary {
   background-color: coral;

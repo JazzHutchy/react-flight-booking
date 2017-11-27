@@ -1,22 +1,39 @@
 import React from 'react'
 
-function Button(props) {
+function Button({ children, primary = false, magic = false, href }) {
   let className = 'btn'
 
-  if (props.primary) {
+  if (primary) {
     className += ' btn-primary'
   }
 
-  if (props.magic) {
-    className += 'btn-rainbow'
+  if (magic) {
+    className += ' btn-rainbow'
   }
 
+  const renderLink = !!href
+  const Component = renderLink ? 'a' : 'button'
+
   return (
-    <button className={className}>
-      {props.title}
-    </button>
+    <Component href={href} className={className}>
+      {children}
+    </Component>
   )
 }
+//   if (renderAnchor) {
+//     return (
+//       <a className={className}>
+//         {children}
+//       </a>
+//     )
+//   }
+//   else {
+//     return (
+//       <button className={className}>
+//         {children}
+//       </button>
+//     )
+//   }
+// }
 
 export default Button
-// module.exports = Button
